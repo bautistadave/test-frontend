@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Patito } from './models/patito.model';
+import { PatitoService } from './services/patito.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testdh';
+
+  constructor( ){
+
+  }
+
+  
+
 }

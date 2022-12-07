@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <span class="navbar-brand mb-0">PATITO</span>
+    </div>
+  </nav>
+
+
+ <div class="container">
+  <button [routerLink]="['/create']" class="btn btn-primary btn-sm mt-5">Agregar</button>
+
+
+<table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Color</th>
+        <th scope="col">Tamaño</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of patitosList; index as i">
+         <th scope="row">{{i +1}}</th>
+        <td>{{p.color}}</td>
+        <td>{{p.tamanio}}</td>
+        <td>{{p.precio}}</td>
+        <td>{{p.cantidad}}</td>
+        <td> 
+            <button class="btn btn-success btn-sm" type="button" [routerLink]="['/update/', p.id]"> Editar</button>
+            <button class="btn btn-danger btn-sm" type="button" (click)="delete(p.id)"> Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div> 
